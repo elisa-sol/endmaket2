@@ -1,6 +1,11 @@
 import '../scss/base/fonts.scss'
 import '../scss/style.scss'
 
+import Swiper from "swiper";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
 let init = false;
 let swiper;
 
@@ -9,6 +14,7 @@ function swiperCard() {
     if (!init) {
       init = true;
       swiper = new Swiper(".swiper", {
+        modules: [Pagination],
         loop: true,
         speed: 1000,
         freeMode: true,

@@ -1,13 +1,11 @@
 {
-  "name": "cps",
+  "name": "endmaket2",
   "version": "1.0.0",
   "description": "Ремонт техники",
-  "main": "index.js",
+  "main": "src/js/index.js",
   "scripts": {
     "dev": "npx webpack serve --mode development",
     "build": "webpack --mode production",
-    "start": "npm run start",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },

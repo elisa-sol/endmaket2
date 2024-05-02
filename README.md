@@ -105,6 +105,14 @@ npm run start
 yarn start
 ```
 
+Запуск в режиме `dev` использует мод development и исполняется на локальном сервере.
+```js
+  devServer: {
+    port: 3000,
+    ...
+  },
+```
+
 ---
 
 ## Два метода загрузки на Github Pages
