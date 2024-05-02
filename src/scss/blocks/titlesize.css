@@ -1,0 +1,16 @@
+.title-size {
+  min-width: 100%;
+  height: auto;
+  background-image: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+  border-top: 1px solid rgb(217, 255, 245);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  color: #7E7E82;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.200000003px;
+  text-align: left;
+}
+
+/*# sourceMappingURL=titlesize.css.map */

@@ -1,0 +1,25 @@
+@media screen and (min-width: 1440px) {
+  .title__text {
+    margin-left: 20px;
+    margin-right: auto;
+  }
+
+  .upperMenu__repair2,
+  .upperMenu__checkStatus2 {
+    display: block;
+    padding-top: 5px;
+    padding-right: 25px;
+  }
+
+  .upperMenu__repair2::before {
+    content: "Оставить заявку";
+    position: relative;
+    top: -15px;
+  }
+
+  .upperMenu__checkStatus2::before {
+    content: "Статус ремонта";
+    position: relative;
+    top: -15px;
+  }
+}

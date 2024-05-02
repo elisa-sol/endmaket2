@@ -1,0 +1,42 @@
+@media screen and (min-width: 320px) {
+  .footer {
+
+    &__container {
+      border-top: 1px solid #D9FFF5;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 20px;
+      color: #7E7E82;
+    }
+
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+
+    &__container {
+      display: flex;
+      align-items: start;
+      border-top: 1px solid #D9FFF5;
+    }
+
+    &__item {
+      display: flex;
+      text-align: start;
+      width: 33.3333%;
+      margin: 20px;
+      color: #7E7E82;
+
+    }
+
+    &__item:last-child {
+      text-align: end;
+    }
+  }
+}

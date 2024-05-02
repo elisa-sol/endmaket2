@@ -1,0 +1,44 @@
+@media screen and (min-width: 320px) {
+
+
+  .slideMenu {
+    min-width: 246px;
+    max-height: 40px;
+    margin-left: 20px;
+    overflow: scroll hidden;
+    white-space: nowrap;
+  }
+
+  .slideMenu::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slideMenu {
+    min-width: 246px;
+    max-height: 40px;
+    overflow: scroll;
+    white-space: nowrap;
+  }
+
+  .slideMenu__button {
+    margin-left: 20px;
+  }
+
+  .slideMenu::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .slideMenu {
+    min-width: 246px;
+    max-height: 40px;
+  }
+
+  .slideMenu__button {
+    margin-left: 20px;
+    padding-right: 10px;
+  }
+}
