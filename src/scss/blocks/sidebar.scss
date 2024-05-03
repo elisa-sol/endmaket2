@@ -1,0 +1,149 @@
+@media screen and (min-width: 320px) and (max-width: 1440px) {
+  .sideBar {
+    display: none;
+  }
+}
+
+
+  @media screen and (min-width: 1440px) {
+  .page {
+    margin-left: 320px;
+  }
+
+.navigation {
+  position: relative;
+}
+
+  .sideBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    min-height: 100%;
+    background: white;
+    //box-shadow: 16px 0 52px 0 #0E185033,
+    //-2px 0 4px 0 #454F7E05;
+  }
+
+  main {
+    flex-grow: 1;
+  }
+
+  footer {
+    flex-shrink: 0;
+  }
+
+  .sideBar__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 320px;
+    margin: 0;
+    padding: 15px;
+    column-gap: 20px;
+    box-sizing: border-box;
+  }
+
+  .sideBar__search {
+    margin-left: auto;
+  }
+
+  .mainMenu__option:hover {
+    color: #7E7E82;
+    transition-duration: 0.5s;
+  }
+
+  .mainMenu__list {
+    list-style: none;
+    display: block;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .mainMenu__option {
+    margin: 15px;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    position: relative;
+  }
+
+  .mainMenu__highlight {
+    position: absolute;
+    top: 5px;
+    left: -15px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .mainMenu__option:hover .mainMenu__highlight {
+    opacity: 1;
+  }
+
+  .contact {
+    margin-top: 150px;
+  }
+
+  .contact__icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 15px;
+    column-gap: 20px;
+    box-sizing: border-box;
+  }
+
+  .contact__profile {
+    margin-right: auto;
+  }
+
+  .contact__mail {
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+  }
+
+  .contact__phoneNumber {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6000000238418579px;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+
+  .contact__lang {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+    padding: 30px 20px;
+  }
+
+  .contact__mail:hover {
+    color: #7E7E82;
+    transition-duration: 0.5s;
+  }
+
+  .contact__phoneNumber:hover {
+    color: #7E7E82;
+    transition-duration: 0.5s;
+  }
+
+  .contact__lang_type:hover {
+    color: #7E7E82;
+    transition-duration: 0.5s;
+  }
+}
