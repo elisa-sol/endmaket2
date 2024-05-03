@@ -86,17 +86,18 @@
 
 
   <div class="mainBlock">
-    <div class="mainBlock__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell.
-      Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br>
-      <br>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+    <div class="mainBlock__text">
+      <div class="mainBlock__text1">Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+      Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</div> <br>
+      <br><span class="mainBlock__text2">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
         количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь,
-            советуют нас родным и близким.
+        советуют нас родным и близким.</span>
 
     </div>
 
     <div class="mainBlock__expand">
-        <img src="assets/img/svg/down.svg" alt="down"> <img class="up" src="assets/img/svg/up.svg" alt="up">
-        <button type="button" class="buttonBlock__show-all-button">Читать далее</button>
+        <img class="downArrow" src="assets/img/svg/down.svg" alt="down"> <img class="up" src="assets/img/svg/up.svg" alt="up">
+        <button type="button" class="buttonBlock__readMore">Читать далее</button>
       </div>
 
 
@@ -205,8 +206,8 @@
     </div>
 
     <div class="buttonBlock">
-      <img class="down" src="assets/img/svg/down.svg" alt="down"> <img class="up" src="assets/img/svg/down.svg" alt="up">
-      <button type="button" class="buttonBlock__show-all-button">Показать все</button>
+      <img class="down2" src="assets/img/svg/down.svg" alt="down"> <img class="up" src="assets/img/svg/down.svg" alt="up">
+      <button type="button" class="buttonBlock__show-all-button2">Показать все</button>
     </div>
   </section>
 
@@ -219,53 +220,63 @@
     <div class="price__header title-size">ЦЕНЫ НА УСЛУГИ</div>
 
 
-
-    <div class="swiper hidden--priceCards">
+<div class="hidden--priceCards">
+    <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <div class="swiper-item">Ремонтные услуги</div>
-            <div class="swiper-item">Диагностика</div>
-            <div class="swiper-item">Цена</div>
-            <div class="swiper-item">Бесплатно</div>
-            <div class="swiper-item">Срок</div>
-            <div class="swiper-item">30 мин</div>
-            <img class="swiper-img" src="assets/img/svg/order.svg" alt="order">
+        <div class="swiper-slide swiper-priceCard">
+            <div class="swiper-item text--mode">Ремонтные услуги</div>
+            <div class="swiper-item">Диагностика</div><br>
+            <div class="swiper-item text--mode">Цена</div>
+            <div class="swiper-item">Бесплатно</div><br>
+            <div class="swiper-item text--mode">Срок</div>
+            <div class="mini-container">
+              <div class="swiper-item">30 мин</div><br>
+              <img class="swiper-img" src="assets/img/svg/order.svg" alt="order">
+            </div>
         </div>
-        <div class="swiper-slide">
-            <div class="swiper-item">Ремонтные услуги</div>
-            <div class="swiper-item">Замена дисплея</div>
-            <div class="swiper-item">Цена</div>
-            <div class="swiper-item">1 000 ₽</div>
-            <div class="swiper-item">Срок</div>
-            <div class="swiper-item">30-120 мин</div>
+        <div class="swiper-slide swiper-priceCard">
+            <div class="swiper-item text--mode">Ремонтные услуги</div>
+            <div class="swiper-item">Замена дисплея</div><br>
+            <div class="swiper-item text--mode">Цена</div>
+            <div class="swiper-item">1 000 ₽</div><br>
+            <div class="swiper-item text--mode">Срок</div>
+          <div class="mini-container">
+            <div class="swiper-item">30-120 мин</div><br>
             <img class="swiper-img" src="assets/img/svg/order.svg" alt="order">
+          </div>
         </div>
-        <div class="swiper-slide">
-            <div class="swiper-item">Ремонтные услуги</div>
-            <div class="swiper-item">Замена полифонического динамика</div>
-            <div class="swiper-item">Цена</div>
-            <div class="swiper-item">1 000 ₽</div>
-            <div class="swiper-item">Срок</div>
-            <div class="swiper-item">30-120 мин</div>
+        <div class="swiper-slide swiper-priceCard">
+            <div class="swiper-item text--mode">Ремонтные услуги</div>
+            <div class="swiper-item">Замена полифонического динамика</div><br>
+            <div class="swiper-item text--mode">Цена</div>
+            <div class="swiper-item">1 000 ₽</div><br>
+            <div class="swiper-item text--mode">Срок</div>
+          <div class="mini-container">
+            <div class="swiper-item">30-120 мин</div><br>
             <img class="swiper-img" src="assets/img/svg/order.svg" alt="order">
+          </div>
         </div>
-        <div class="swiper-slide">
-            <div class="swiper-item">Ремонтные услуги</div>
-            <div class="swiper-item">Тестирование с выдачей технического заключения</div>
-            <div class="swiper-item">Цена</div>
-            <div class="swiper-item">1 000 ₽</div>
-            <div class="swiper-item">Срок</div>
-            <div class="swiper-item">30-120 мин</div>
+        <div class="swiper-slide swiper-priceCard">
+            <div class="swiper-item text--mode">Ремонтные услуги</div>
+            <div class="swiper-item">Тестирование с выдачей технического заключения</div><br>
+            <div class="swiper-item text--mode">Цена</div>
+            <div class="swiper-item">1 000 ₽</div><br>
+            <div class="swiper-item text--mode">Срок</div>
+          <div class="mini-container">
+            <div class="swiper-item">30-120 мин</div><br>
             <img class="swiper-img" src="assets/img/svg/order.svg" alt="order">
+          </div>
         </div>
-        <div class="swiper-slide">
-            <div class="swiper-item">Ремонтные услуги</div>
-            <div class="swiper-item">Замена программного обеспечения</div>
-            <div class="swiper-item">Цена</div>
-            <div class="swiper-item">1 000 ₽</div>
-            <div class="swiper-item">Срок</div>
-            <div class="swiper-item">30-120 мин</div>
+        <div class="swiper-slide swiper-priceCard">
+            <div class="swiper-item text--mode">Ремонтные услуги</div>
+            <div class="swiper-item">Замена программного обеспечения</div><br>
+            <div class="swiper-item text--mode">Цена</div>
+            <div class="swiper-item">1 000 ₽</div><br>
+            <div class="swiper-item text--mode">Срок</div>
+          <div class="mini-container">
+            <div class="swiper-item">30-120 мин</div><br>
             <img class="swiper-img" src="assets/img/svg/order.svg" alt="order">
+          </div>
         </div>
       </div>
 
@@ -273,13 +284,15 @@
 
     </div>
 
+</div>
 
 
 
 
 
-    <div class="price__container hidden--mode">
-      <div class="price__names">
+
+    <div class="price__container">
+      <div class="price__names hidden--mode">
        <ul class="price__head">
          <li class="price__item">Ремонтные услуги</li>
          <li class="price__item">Цена</li>
@@ -287,7 +300,7 @@
          <li class="price__item"></li>
        </ul>
       </div>
-      <div class="price__table">
+      <div class="price__table hidden--mode">
        <ul class="price__head">
          <li class="price__item">Диагностика</li>
          <li class="price__item">Бесплатно</li>

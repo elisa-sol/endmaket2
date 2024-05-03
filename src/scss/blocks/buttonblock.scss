@@ -8,23 +8,12 @@
   .buttonBlock {
     display: flex;
     column-gap: 1px;
+    margin-left: 10px;
   }
 
-  .buttonBlock__show-all-button {
-    font-family: "TT Lakes", sans-serif;
-    color: black;
-    border: none;
-    background: #F8F8F8;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .buttonBlock {
-    display: flex;
-    column-gap: 1px;
-  }
-
-  .buttonBlock__show-all-button {
+  .buttonBlock__show-all-button,
+  .buttonBlock__readMore,
+  .buttonBlock__show-all-button2 {
     font-family: "TT Lakes", sans-serif;
     color: black;
     border: none;
