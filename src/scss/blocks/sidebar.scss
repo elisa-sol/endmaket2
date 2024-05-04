@@ -267,22 +267,9 @@
 
 
   @media screen and (min-width: 1440px) {
-  .page {
-    margin-left: 320px;
-  }
-
-  .navigation {
-    position: relative;
-  }
 
   .sideBar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 1000;
     margin: 0;
-    display: flex;
     flex-direction: column;
     width: 320px;
     min-height: 100%;
