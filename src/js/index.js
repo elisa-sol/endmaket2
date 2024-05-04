@@ -7,4 +7,5 @@ import '../scss/blocks/swiper.scss'
 import './scripts/showallbrands.js'
 import './scripts/showallequipment.js'
 import './scripts/readmore.js'
+import './scripts/sidebar.js'
 
