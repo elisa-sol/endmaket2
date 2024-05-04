@@ -25,7 +25,7 @@ function checkWidth() {
         closeMain.style.display = 'block';
       }
     });
-  } else if (width >= 768 && width <= 1440) {
+  } else if (width >= 768 && width < 1440) {
     burgerButton.addEventListener('click', function() {
       if (openSideBar && closeMain) {
         burgerButton.style.display = 'none';
@@ -54,8 +54,7 @@ function checkWidth() {
         closeMain.style.opacity = '1';
       }
     });
-  }
-  else {
+  } else {
     closeMain.style.marginLeft = '320px';
     navigation.style.position = 'relative';
     openSideBar.style.position = 'absolute';
