@@ -53,7 +53,11 @@ function checkWidth() {
 }
 
 mainClick.addEventListener('click', function(event) {
-  if (width >= 768 && width < 1440 && openSideBar.style.display === 'flex' && !openSideBar.contains(event.target) && event.target !== closeMain && event.target !== crossButton) {
+  if (width >= 768 && width < 1440
+    && openSideBar.style.display === 'flex'
+    && !openSideBar.contains(event.target)
+    && event.target !== closeMain
+    && event.target !== crossButton) {
     openSideBar.style.display = 'none';
     closeMain.style.opacity = '1';
     burgerButton.style.display = 'flex';

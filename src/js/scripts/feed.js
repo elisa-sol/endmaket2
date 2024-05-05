@@ -7,7 +7,9 @@ let mainClick = document.querySelector('.page');
 let closeMain = document.querySelector('.navigation');
 let width = window.innerWidth;
 let burgerButton = document.querySelector('.upperMenu__burger');
-let sidebarOriginalOpacity; // Добавляем переменную для хранения изначального значения opacity сайдбара
+let footerMargin = document.querySelector('.contact');
+
+
 
 function checkWidth() {
   if (width >= 320 && width < 768) {
@@ -29,18 +31,17 @@ function checkWidth() {
       }
     });
 
-  } else if (width >= 768) {
+  } else if (width >= 768 && width < 1440) {
     chatButton.addEventListener('click', function() {
       if (openFeedback && closeMain) {
         openFeedback.style.display = 'block';
-        closeMain.style.opacity = '0.0008';
+        closeMain.style.opacity = '0.008';
         openFeedback.style.position = 'fixed';
         openFeedback.style.top = '0';
         openFeedback.style.right = '0';
         openFeedback.style.bottom = '0';
         openFeedback.style.zIndex = '1000';
         sideBar.style.display = 'block';
-        sidebarOriginalOpacity = window.getComputedStyle(sideBar).opacity; // Сохраняем изначальное значение opacity сайдбара
         sideBar.style.opacity = '0.2';
         burgerButton.style.display = 'block';
         openFeedback.style.boxShadow = '16px 0px 52px 0px #0E185033';
@@ -51,22 +52,93 @@ function checkWidth() {
       if (openFeedback && closeMain) {
         openFeedback.style.display = 'none';
         burgerButton.style.display = 'flex';
-        closeMain.style.opacity = '1';
-        sideBar.style.opacity = sidebarOriginalOpacity; // Восстанавливаем изначальное значение opacity сайдбара
+        closeMain.style.opacity = '0.08';
         burgerButton.style.display = 'none';
         sideBar.style.display = 'flex';
+        sideBar.style.opacity = '1';
+      }
+    });
+  } else if (width >= 1440) {
+    chatButton.addEventListener('click', function() {
+      if (openFeedback && closeMain) {
+        openFeedback.style.display = 'block';
         closeMain.style.opacity = '0.08';
+        openFeedback.style.position = 'fixed';
+        openFeedback.style.top = '0';
+        openFeedback.style.right = '0';
+        openFeedback.style.bottom = '0';
+        openFeedback.style.zIndex = '1000';
+        sideBar.style.display = 'block';
+        sideBar.style.opacity = '0.08';
+        footerMargin.style.marginTop = '210px';
+        burgerButton.style.display = 'block';
+        openFeedback.style.boxShadow = '16px 0px 52px 0px #0E185033';
       }
     });
 
-    closeMain.addEventListener('click', function(event) {
-      if (width >= 768 && openFeedback.style.display === 'block' && !openFeedback.contains(event.target) && event.target !== closeMain && event.target !== buttonCross) {
+    buttonCross.addEventListener('click', function() {
+      if (openFeedback && closeMain) {
         openFeedback.style.display = 'none';
-        sideBar.style.display = 'none';
+        burgerButton.style.display = 'flex';
+        closeMain.style.opacity = '1';
+        burgerButton.style.display = 'none';
+        sideBar.style.display = 'block';
+        sideBar.style.opacity = '1';
         closeMain.style.opacity = '1';
       }
     });
   }
+
+    closeMain.addEventListener('click', function(event) {
+      if (width >= 768 && width < 1440 && openFeedback.style.display === 'block'
+        && !openFeedback.contains(event.target) &&
+        event.target !== closeMain &&
+        event.target !== buttonCross) {
+        openFeedback.style.display = 'none';
+        sideBar.style.display = 'block';
+        closeMain.style.opacity = '0.08';
+        sideBar.style.opacity = '1';
+      } else if (width >= 1440
+        && openFeedback.style.display === 'block'
+        && !openFeedback.contains(event.target) &&
+        event.target !== closeMain &&
+        event.target !== buttonCross) {
+          openFeedback.style.display = 'none';
+          sideBar.style.display = 'block';
+          sideBar.style.opacity = '1';
+          closeMain.style.opacity = '1';
+          footerMargin.style.marginTop = '210px';
+      }
+    });
+
+  // closeMain.addEventListener('click', function(event) {
+  //   // Проверяем, было ли открыто openFeedback и sideBar и не является ли элемент, на который произошло нажатие, частью openFeedback или sideBar
+  //   if (openFeedback.style.display === 'none'
+  //     && !openFeedback.contains(event.target)
+  //     && sideBar.style.display === 'block'
+  //     && !sideBar.contains(event.target)) {
+  //     // openFeedback.style.display = 'none';
+  //     sideBar.style.display = 'none';
+  //     closeMain.style.opacity = '1';
+  //   }
+  // });
+        // closeMain.addEventListener('click', function(event) {
+        //   if (width >= 768 && width < 1440
+        //     && sideBar.style.display === 'flex'
+        //     && !sideBar.contains(event.target)
+        //     && event.target !== closeMain
+        //     && event.target !== buttonCross) {
+        //     console.log('clicked');
+        //     sideBar.style.display = 'none';
+        //     closeMain.style.opacity = '1';
+        //     burgerButton.style.display = 'flex';
+        //   }
+        //
+        // });
+      // } else if (width >= 1440) {
+
+    //   }
+    // });
 }
 
 checkWidth();
