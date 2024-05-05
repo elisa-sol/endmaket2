@@ -1,9 +1,11 @@
+
+
 let chatButton = document.querySelector('.contact__chat');
 let openFeedback = document.querySelector('.feedback');
 let hideHeader = document.querySelector('.header');
 let sideBar = document.querySelector('.sideBar');
 let buttonCross = document.querySelector('.feedback__cross');
-let mainClick = document.querySelector('.page');
+// let mainClick = document.querySelector('.page');
 let closeMain = document.querySelector('.navigation');
 let width = window.innerWidth;
 let burgerButton = document.querySelector('.upperMenu__burger');
@@ -34,6 +36,7 @@ function checkWidth() {
   } else if (width >= 768 && width < 1440) {
     chatButton.addEventListener('click', function() {
       if (openFeedback && closeMain) {
+        footerMargin.style.marginTop = '210px';
         openFeedback.style.display = 'block';
         closeMain.style.opacity = '0.008';
         openFeedback.style.position = 'fixed';
@@ -70,7 +73,7 @@ function checkWidth() {
         openFeedback.style.zIndex = '1000';
         sideBar.style.display = 'block';
         sideBar.style.opacity = '0.08';
-        footerMargin.style.marginTop = '210px';
+        // footerMargin.style.marginTop = '210px';
         burgerButton.style.display = 'block';
         openFeedback.style.boxShadow = '16px 0px 52px 0px #0E185033';
       }
@@ -85,60 +88,61 @@ function checkWidth() {
         sideBar.style.display = 'block';
         sideBar.style.opacity = '1';
         closeMain.style.opacity = '1';
+        // footerMargin.style.marginTop = '210px';
+
       }
     });
   }
 
     closeMain.addEventListener('click', function(event) {
-      if (width >= 768 && width < 1440 && openFeedback.style.display === 'block'
-        && !openFeedback.contains(event.target) &&
-        event.target !== closeMain &&
-        event.target !== buttonCross) {
+      if (width >= 768 && width < 1440
+        && openFeedback.style.display === 'block'
+        && !openFeedback.contains(event.target)
+        && event.target !== closeMain
+        && event.target !== buttonCross
+        ) {
         openFeedback.style.display = 'none';
-        sideBar.style.display = 'block';
+        // sideBar.style.display = 'block';
+        closeMain.style.display = 'block';
         closeMain.style.opacity = '0.08';
         sideBar.style.opacity = '1';
       } else if (width >= 1440
         && openFeedback.style.display === 'block'
-        && !openFeedback.contains(event.target) &&
-        event.target !== closeMain &&
-        event.target !== buttonCross) {
+        && !openFeedback.contains(event.target)
+        && event.target !== closeMain
+        && event.target !== buttonCross) {
           openFeedback.style.display = 'none';
           sideBar.style.display = 'block';
           sideBar.style.opacity = '1';
           closeMain.style.opacity = '1';
-          footerMargin.style.marginTop = '210px';
+          // footerMargin.style.marginTop = '210px';
       }
     });
 
-  // closeMain.addEventListener('click', function(event) {
-  //   // Проверяем, было ли открыто openFeedback и sideBar и не является ли элемент, на который произошло нажатие, частью openFeedback или sideBar
+
+  // mainClick.addEventListener('click', function(event) {
+  //   if (width >= 768 && width < 1440
+  //     && sideBar.style.display === 'block'
+  //     && !sideBar.contains(event.target)
+  //     && event.target === closeMain
+  //     && event.target !== crossButton) {
+  //     sideBar.style.display = 'none';
+  //     closeMain.style.opacity = '1';
+  //     // burgerButton.style.display = 'flex';
+  //   }
+  // });
+
+  // window.addEventListener('click', function(event) {
   //   if (openFeedback.style.display === 'none'
   //     && !openFeedback.contains(event.target)
   //     && sideBar.style.display === 'block'
   //     && !sideBar.contains(event.target)) {
-  //     // openFeedback.style.display = 'none';
+  //     openFeedback.style.display = 'none';
   //     sideBar.style.display = 'none';
   //     closeMain.style.opacity = '1';
+  //     sideBar.style.display = 'block';
   //   }
   // });
-        // closeMain.addEventListener('click', function(event) {
-        //   if (width >= 768 && width < 1440
-        //     && sideBar.style.display === 'flex'
-        //     && !sideBar.contains(event.target)
-        //     && event.target !== closeMain
-        //     && event.target !== buttonCross) {
-        //     console.log('clicked');
-        //     sideBar.style.display = 'none';
-        //     closeMain.style.opacity = '1';
-        //     burgerButton.style.display = 'flex';
-        //   }
-        //
-        // });
-      // } else if (width >= 1440) {
-
-    //   }
-    // });
 }
 
 checkWidth();
