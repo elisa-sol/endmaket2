@@ -67,7 +67,7 @@ function checkWidth() {
 }
 
 closeMain.addEventListener('click', function(event) {
-  if ((width >= 768 && width <= 1440) && !openSideBar.contains(event.target)) {
+  if ((width >= 768 && width < 1440) && !openSideBar.contains(event.target)) {
     burgerButton.style.display = 'flex';
     group.style.display = 'flex';
     hideHeader.style.right = '0';
