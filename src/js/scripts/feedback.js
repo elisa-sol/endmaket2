@@ -81,3 +81,48 @@
 //     checkWidth();
 //
 //     window.addEventListener('resize', checkWidth);
+
+//
+//
+// let chatButton2 = document.querySelector('.upperMenu__chat')
+// let chatButton = document.querySelector('.contact__chat');
+// let openFeedback = document.querySelector('.feedback');
+// let hideHeader = document.querySelector('.header');
+// let sideBar = document.querySelector('.sideBar');
+// let buttonCross = document.querySelector('.feedback__cross');
+// // let mainClick = document.querySelector('.page');
+// let closeMain = document.querySelector('.navigation');
+// let width = window.innerWidth;
+// let burgerButton = document.querySelector('.upperMenu__burger');
+// let footerMargin = document.querySelector('.contact');
+//
+//
+//
+// chatButton2.addEventListener('click', function() {
+//   if (openFeedback && closeMain) {
+//     console.log('hi')
+//     // footerMargin.style.marginTop = '210px';
+//     openFeedback.style.display = 'block';
+//     closeMain.style.opacity = '0.008';
+//     openFeedback.style.position = 'fixed';
+//     openFeedback.style.top = '0';
+//     openFeedback.style.right = '0';
+//     openFeedback.style.bottom = '0';
+//     openFeedback.style.zIndex = '1000';
+//     // sideBar.style.display = 'block';
+//     // sideBar.style.opacity = '0.2';
+//     // burgerButton.style.display = 'block';
+//     openFeedback.style.boxShadow = '16px 0px 52px 0px #0E185033';
+//   }
+// });
+//
+// buttonCross.addEventListener('click', function() {
+//   if (openFeedback && closeMain) {
+//     openFeedback.style.display = 'none';
+//     // burgerButton.style.display = 'flex';
+//     closeMain.style.opacity = '1';
+//     // burgerButton.style.display = 'none';
+//     // sideBar.style.display = 'flex';
+//     // sideBar.style.opacity = '1';
+//   }
+// });

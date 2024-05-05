@@ -1,5 +1,5 @@
 
-
+let chatButton2 = document.querySelector('.upperMenu__chat')
 let chatButton = document.querySelector('.contact__chat');
 let openFeedback = document.querySelector('.feedback');
 let hideHeader = document.querySelector('.header');
@@ -118,6 +118,7 @@ function checkWidth() {
           // footerMargin.style.marginTop = '210px';
       }
     });
+
 
 
   // mainClick.addEventListener('click', function(event) {
