@@ -1,82 +1,82 @@
 
-  @media screen and (min-width: 320px) {
+.feedback__highlight {
+  display: flex;
+  column-gap: 15px;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.feedback__title {
+  font-family: 'TT Lakes', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6000000238418579px;
+  text-align: left;
+  color: #1B1C21;
+}
+
+.feedback__field {
+  margin-left: 10px;
+  //margin-right: 10px;
+  border: 1px solid #EAEAEA;
+  background: #FFFFFF;
+  width: calc(100% - 20px);
+  padding: 12px 16px;
+  color: #B5B6BC;
+  font-family: 'TT Lakes', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.20000000298023224px;
+  text-align: left;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.feedback__field::placeholder {
+  opacity: 0.7;
+}
+
+.message--size {
+  padding-bottom: 100px;
+}
+
+.feedback__text {
+  margin: 15px;
+}
+
+.feedback__button {
+  border: none;
+  background: none;
+  display: flex;
+  margin-left: auto;
+}
+
+.pink {
+  color: #FF3E79;
+}
+
+@media screen and (min-width: 320px) {
     .feedback {
       width: 100%;
-      height: auto;
+      height: 100vh;
       background: #FFFFFF;
     }
 
     .feedback__cross {
       margin-bottom: 20px;
-      margin-top: 15px;
       margin-left: 15px;
-    }
-
-    .feedback__highlight {
-      display: flex;
-      column-gap: 15px;
-      justify-items: center;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .feedback__title {
-      font-family: 'TT Lakes', sans-serif;
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 32px;
-      letter-spacing: -0.6000000238418579px;
-      text-align: left;
-      color: #1B1C21;
-    }
-
-    .feedback__form {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .feedback__field {
-      margin-left: 10px;
-      //margin-right: 10px;
-      border: 1px solid #EAEAEA;
-      background: #FFFFFF;
-      width: calc(100% - 20px);
-      padding: 12px 16px;
-      color: #B5B6BC;
-      font-family: 'TT Lakes', sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: -0.20000000298023224px;
-      text-align: left;
-      box-sizing: border-box;
-      border-radius: 8px;
-    }
-
-    .feedback__field::placeholder {
-      opacity: 0.7;
-    }
-
-    .message--size {
-      padding-bottom: 100px;
-    }
-
-    .feedback__text {
-      margin: 15px;
-    }
-
-    .feedback__button {
-      border: none;
-      background: none;
-      display: flex;
-      margin-left: auto;
-    }
-
-    .pink {
-      color: #FF3E79;
+      padding-top: 15px;
     }
 
     .feedback {
@@ -85,6 +85,8 @@
   }
 
   @media screen and (min-width: 768px) {
+
+
     .feedback {
       display: block;
       width: 440px;
@@ -100,82 +102,16 @@
 
     .feedback__cross {
       margin-bottom: 20px;
-      margin-top: 15px;
+      padding-top: 15px;
       margin-left: 15px;
       position: relative;
       right: 75px;
       top: 60px;
     }
 
-    .feedback__highlight {
-      display: flex;
-      column-gap: 15px;
-      justify-items: center;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .feedback__title {
-      font-family: 'TT Lakes', sans-serif;
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 32px;
-      letter-spacing: -0.6000000238418579px;
-      text-align: left;
-      color: #1B1C21;
-    }
-
-    .feedback__form {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .feedback__field {
-      margin-left: 10px;
-      //margin-right: 10px;
-      border: 1px solid #EAEAEA;
-      background: #FFFFFF;
-      width: calc(100% - 20px);
-      padding: 12px 16px;
-      color: #B5B6BC;
-      font-family: 'TT Lakes', sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: -0.20000000298023224px;
-      text-align: left;
-      box-sizing: border-box;
-      border-radius: 6px;
-    }
-
-    .feedback__field::placeholder {
-      opacity: 0.7;
-    }
-
-    .message--size {
-      padding-bottom: 100px;
-    }
-
-    .feedback__text {
-      margin: 15px;
-    }
-
-    .feedback__button {
-      border: none;
-      background: none;
-      display: flex;
-      margin-left: auto;
-    }
-
-    .pink {
-      color: #FF3E79;
-    }
-
     .feedback {
       display: none;
     }
+
   }
 
