@@ -29,6 +29,7 @@ function checkWidth() {
       if (openSideBar && closeMain) {
         burgerButton.style.display = 'none';
         openSideBar.style.display = 'flex';
+        openSideBar.style.opacity = '1';
         closeMain.style.opacity = '0.08';
       }
     });
@@ -63,19 +64,6 @@ function checkWidth() {
       burgerButton.style.display = 'flex';
     }
   });
-
-
-// mainClick.addEventListener('click', function(event) {
-//   if (width >= 768 && width < 1440
-//     && openSideBar.style.display === 'flex'
-//     && !openSideBar.contains(event.target)
-//     && event.target !== closeMain
-//     && event.target !== crossButton) {
-//     openSideBar.style.display = 'none';
-//     closeMain.style.opacity = '1';
-//     burgerButton.style.display = 'flex';
-//   }
-// });
 
 
 checkWidth();
