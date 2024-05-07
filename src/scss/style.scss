@@ -1,7 +1,7 @@
 //@import './base/fonts.scss';
 @import './base/global.scss';
 
-@import './blocks/list.scss';
+@import './blocks/activebuttons';
 @import './blocks/swiper.scss';
 @import './blocks/header.scss';
 @import './blocks/mainblock.scss';
@@ -15,4 +15,6 @@
 @import './blocks/footer.scss';
 @import './blocks/sidebar.scss';
 @import 'blocks/feedback&call';
+@import 'blocks/animationkeyframes';
+
 

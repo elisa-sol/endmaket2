@@ -15,11 +15,13 @@
     content: "Оставить заявку";
     position: relative;
     top: -15px;
+    color: black !important;
   }
 
   .upperMenu__checkStatus2::before {
     content: "Статус ремонта";
     position: relative;
     top: -15px;
+    color: black !important;
   }
 }

@@ -147,7 +147,8 @@ cancelButton.addEventListener('click', function() {
 mainClick.addEventListener('click', function() {
   if (width >= 768 && width < 1440
     && orderCall
-    && closeMain) {
+    && closeMain
+    && orderCall.style.display === 'flex') {
     orderCall.style.display = 'none';
     sideBar.style.display = 'none';
     closeMain.style.opacity = '1';

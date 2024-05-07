@@ -17,12 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
       arrow.style.transform = 'rotate(180deg)';
       readText.style.display = 'block';
       hiddenText.style.display = 'block';
+      hiddenText.style.opacity = '1'; //
       isExpanded = true;
     } else {
       readMoreButton.textContent = "Читать далее";
       readText.style.display = 'block';
       hiddenText.style.display = 'none';
-
+      hiddenText.style.opacity = '0'; //
       const arrow = document.querySelector('.downArrow');
       arrow.classList.remove('rotate');
       arrow.style.transform = 'rotate(0deg)';

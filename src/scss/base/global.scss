@@ -24,31 +24,7 @@ body {
   padding-left: 10px;
 }
 
-.slideMenu__button {
-  font-family: "TT Lakes", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  text-align: left;
-  color: rgb(126, 126, 130);
-  display: inline-block;
-  align-content: center;
-  height: 40px;
-  padding-left: 13px;
-  padding-right: 13px;
-  box-sizing: border-box;
-}
 
-.slideMenu__button:hover {
-  border-width: 2px;
-  border-style: solid;
-  border-color: rgb(184, 255, 236);
-  border-image: initial;
-  border-radius: 6px;
-  background: rgb(255, 255, 255);
-}
 
 .buttonBlock__show-all-button {
   border: none;

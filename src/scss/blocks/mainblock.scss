@@ -1,3 +1,19 @@
+//@keyframes appearing {
+//  0% {
+//    opacity: 0;
+//  }
+//  100% {
+//    opacity: 1;
+//  }
+//}
+
+@import "animationkeyframes";
+
+.mainBlock__text2 {
+  animation-name: appearing;
+  animation-duration: 1s;
+}
+
 @media screen and (min-width: 320px) {
   .mainBlock {
     min-width: 100%;
@@ -49,6 +65,8 @@
       margin-bottom: 0;
       grid-area: text;
     }
+
+
 
     &__expand {
       display: flex;
