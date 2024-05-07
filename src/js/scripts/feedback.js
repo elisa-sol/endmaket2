@@ -1,3 +1,5 @@
+
+
 let chatButton2 = document.querySelector('.upperMenu__chat')
 let chatButton = document.querySelector('.contact__chat');
 let openFeedback = document.querySelector('.feedback');
@@ -48,6 +50,7 @@ function checkWidth() {
     buttonCross.addEventListener('click', function() {
       if (openFeedback && closeMain) {
         openFeedback.style.display = 'none';
+        // openFeedback.style.right
         burgerButton.style.display = 'flex';
         closeMain.style.opacity = '0.08';
         burgerButton.style.display = 'none';
@@ -76,7 +79,7 @@ function checkWidth() {
     buttonCross.addEventListener('click', function() {
       if (openFeedback && closeMain) {
         openFeedback.style.display = 'none';
-        burgerButton.style.display = 'flex';
+        // burgerButton.style.display = 'flex';
         closeMain.style.opacity = '1';
         burgerButton.style.display = 'none';
         sideBar.style.display = 'flex';
@@ -116,7 +119,7 @@ chatButton2.addEventListener('click', function() {
   if (width >= 768 && width < 1440
     && openFeedback && mainClick) {
     openFeedback.style.display = 'flex';
-    closeMain.style.opacity = '0.008';
+    // closeMain.style.opacity = '0.008';
     openFeedback.style.position = 'fixed';
     openFeedback.style.top = '0';
     openFeedback.style.right = '0';
@@ -131,13 +134,17 @@ buttonCross.addEventListener('click', function() {
   if (width >= 768 && width < 1440
     && openFeedback && closeMain) {
     openFeedback.style.display = 'none';
-    closeMain.style.opacity = '0.08';
+    // closeMain.style.opacity = '0.08';
     burgerButton.style.display = 'flex';
     sideBar.style.display = 'none';
     closeMain.style.opacity = '1';
-
   }
 });
+
+
+
+
+
 
 mainClick.addEventListener('click', function() {
   if (width >= 768 && width < 1440 && openFeedback && closeMain) {
