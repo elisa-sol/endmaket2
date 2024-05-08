@@ -1,13 +1,9 @@
-//@keyframes appearing {
-//  0% {
-//    opacity: 0;
-//  }
-//  100% {
-//    opacity: 1;
-//  }
-//}
-
 @import "animationkeyframes";
+
+.image {
+  margin-right: auto;
+  padding-left: 15px;
+}
 
 .mainBlock__text2 {
   animation-name: appearing;

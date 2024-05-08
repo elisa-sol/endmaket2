@@ -44,7 +44,7 @@ function checkWidth() {
     });
   } else {
     closeMain.style.marginLeft = '320px';
-    navigation.style.position = 'relative'; // closeMain.
+    navigation.style.position = 'relative';
     openSideBar.style.position = 'fixed';
     openSideBar.style.top = '0';
     openSideBar.style.bottom = '0';

@@ -7,7 +7,7 @@ let closeMain = document.querySelector('.navigation');
 let mainClick = document.querySelector('.page');
 let burgerButton = document.querySelector('.upperMenu__burger');
 let width = window.innerWidth;
-// let ani1 = document.querySelector('.extension2');
+
 
 function small() {
   if (width >= 320 && width < 768) {
@@ -16,7 +16,6 @@ function small() {
         orderCall.style.display = 'flex';
         closeMain.style.display = 'none';
         sideBar.style.display = 'none';
-        openedByCallButton = true;
       }
     });
 
@@ -25,7 +24,6 @@ function small() {
         orderCall.style.display = 'none';
         closeMain.style.display = 'block';
         sideBar.style.display = 'flex';
-        openedByCallButton = false;
       }
     });
   }
@@ -74,7 +72,7 @@ function medium() {
     });
 
     callButton2.addEventListener('click', function(event) {
-      event.stopPropagation(); // Предотвращаем всплытие события
+      event.stopPropagation();
       if (orderCall && mainClick) {
         orderCall.style.display = 'flex';
         closeMain.style.opacity = '0.008';
@@ -90,30 +88,51 @@ function medium() {
 
     closeMain.addEventListener("click", function(event) {
       event.stopPropagation();
+      let sideBarFlag1 = sideBar.style.display !== 'none' && sideBar.style.display !== '';
+
       if (orderCall.style.display !== "none" && sideBarFlag) {
-        orderCall.style.animationName = "extension1"
-        orderCall.style.animationDuration = "5s"
-        orderCall.style.display = 'none';
-        sideBar.style.display = 'flex';
-        closeMain.style.opacity = '0.08';
-        sideBar.style.opacity = '1';
-        sideBarFlag = true;
-        console.log(1)
-      } else {
-        sideBarFlag = false;
-        orderCall.style.display = 'none';
+        if (!sideBarFlag1) {
+          if (sideBar.style.display === 'none' && !sideBarFlag) {
+            orderCall.style.display = 'none';
+            sideBar.style.display = 'flex';
+            sideBar.style.opacity = '1';
+            closeMain.style.opacity = '0.08';
+          } else if (sideBar.style.display === 'none' && !sideBarFlag) {
+            sideBarFlag = true
+          } else {
+            closeMain.style.opacity = '1';
+            orderCall.style.display = 'none';
+          }
+        } else {
+          orderCall.style.display = 'none';
+          sideBar.style.display = 'flex';
+          closeMain.style.opacity = '0.08';
+          sideBar.style.opacity = '1';
+        }
+      }
+      else if (orderCall.style.display !== "none" && !sideBarFlag) {
+        if (sideBar.style.display === '' || sideBar.style.display === 'none') {
+          closeMain.style.opacity = '1';
+          orderCall.style.display = 'none';
+        } else {
+          closeMain.style.opacity = '0.08';
+          orderCall.style.display = 'none';
+        }
       }
     });
 
     cancelButton.addEventListener('click', function() {
-      if (!sideBarFlag) {
+      let sideBarFlag1 = sideBar.style.display !== 'none' && sideBar.style.display !== '';
+      let sideBarFlag2 = sideBar.style.display === 'none' || sideBar.style.display === ''
+
+      if (sideBarFlag1) {
         orderCall.style.display = 'none';
         closeMain.style.display = 'block';
-        closeMain.style.opacity = '1';
-      } else {
-        orderCall.style.display = 'none';
         sideBar.style.opacity = '1';
         closeMain.style.opacity = '0.08';
+      } else if (sideBarFlag2) {
+        orderCall.style.display = 'none';
+        closeMain.style.opacity = '1';
       }
     });
   }

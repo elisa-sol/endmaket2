@@ -2,16 +2,12 @@ button {
   cursor: pointer;
 }
 
-
-
 a:-webkit-any-link {
   cursor: pointer;
   color: -webkit-link;
   text-decoration: none;
   color: #7e7e82;
   border-radius: 6px;
-  //border: 2px solid rgba(0, 0, 0, 0);
-  //padding: 8px 20px;
   transition: .5s border, 1s background-color;
 }
 

@@ -1,24 +1,26 @@
-
-
 @media screen and (min-width: 320px) {
   .upperMenu {
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 88px;
-    min-width: 320px;
+    max-width: 100%;
     background: white;
     border-bottom: 1px solid rgb(217, 255, 245);
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 25px;
-    padding-right: 25px;
     gap: 15px;
 
     &__divider2 {
       margin-right: auto;
       padding-left: 15px;
     }
+
+    &__burger {
+      padding-left: 25px;
+    }
+
+   &__checkStatus {
+     padding-right: 25px;
+   }
 
     &__call,
     &__chat,
@@ -44,6 +46,7 @@
     column-gap: 25px;
     border-bottom: 1px solid rgb(217, 255, 245);
     box-sizing: border-box;
+
 
     &__group {
       margin-right: auto;
