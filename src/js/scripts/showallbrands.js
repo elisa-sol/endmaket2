@@ -28,9 +28,9 @@ const addAdditionalElement = (svg, alt, apple) => {
 }
 
 
-addAdditionalElement("../assets/img/svg/lenovo.svg", "Lenovo", false);
-addAdditionalElement("../assets/img/svg/samsung.svg", "Samsung", false);
-addAdditionalElement("../assets/img/svg/apple.svg", "Apple", true);
+addAdditionalElement("src/assets/img/svg/lenovo.svg", "Lenovo", false);
+addAdditionalElement("src/assets/img/svg/samsung.svg", "Samsung", false);
+addAdditionalElement("src/assets/img/svg/apple.svg", "Apple", true);
 
 let num = window.innerWidth;
 let newCount = 0;
