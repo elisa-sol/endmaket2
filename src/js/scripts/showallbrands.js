@@ -21,16 +21,16 @@ const addAdditionalElement = (svg, alt, apple) => {
 
   additionalElement.appendChild(img);
 
-  let button = makeImage("img", "button", "../assets/img/svg/button.svg", "Button");
+  let button = makeImage("img", "button", "assets/img/svg/button.svg", "Button");
   additionalElement.appendChild(button);
 
   brand.appendChild(additionalElement);
 }
 
 
-addAdditionalElement("src/assets/img/svg/lenovo.svg", "Lenovo", false);
-addAdditionalElement("src/assets/img/svg/samsung.svg", "Samsung", false);
-addAdditionalElement("src/assets/img/svg/apple.svg", "Apple", true);
+addAdditionalElement("assets/img/svg/lenovo.svg", "Lenovo", false);
+addAdditionalElement("assets/img/svg/samsung.svg", "Samsung", false);
+addAdditionalElement("assets/img/svg/apple.svg", "Apple", true);
 
 let num = window.innerWidth;
 let newCount = 0;
