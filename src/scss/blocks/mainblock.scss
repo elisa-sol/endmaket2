@@ -10,6 +10,20 @@
   animation-duration: 1s;
 }
 
+.buttonBlock__readMore::before {
+  content: url('/src/assets/img/svg/down.svg');
+  position: relative;
+  left: 0;
+  top: 7px;
+}
+
+.rotateArrow::before {
+  content: url('/src/assets/img/svg/up.svg');
+  position: relative;
+  left: 0;
+  top: 7px;
+}
+
 @media screen and (min-width: 320px) {
   .mainBlock {
     min-width: 100%;

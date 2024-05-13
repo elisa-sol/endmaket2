@@ -53,7 +53,7 @@
       <input class="feedback__field" type="text" id="name" placeholder="Имя">
       <input class="feedback__field" type="text" id="tel" placeholder="Телефон">
       <input class="feedback__field" type="text" id="email" placeholder="Электронная почта">
-      <input class="feedback__field message--size" type="text" id="message" placeholder="Сообщение">
+      <input class="feedback__field feedback__field-message--size" type="text" id="message" placeholder="Сообщение">
     </form>
 
     <div class="feedback__text">Нажимая “отправить”, вы даете согласие на <a href="#" class="pink">обработку
@@ -154,9 +154,9 @@
       <img src="assets/img/svg/burger.svg" alt="burger">
     </div>
 
-    <div class="upperMenu__divider">
-      <img src="assets/img/svg/divider.svg" alt="divider">
-    </div>
+<!--    <div class="upperMenu__divider">-->
+<!--      <img src="assets/img/svg/divider.svg" alt="divider">-->
+<!--    </div>-->
 
     <div class="upperMenu__group">
       <a href="#" class="upperMenu__logo">
@@ -176,9 +176,9 @@
       <a href="#" class=""><img src="assets/img/svg/profile.svg" alt="profile"></a>
     </div>
 
-    <div class="upperMenu__divider2">
-        <img src="assets/img/svg/divider.svg" alt="divider">
-    </div>
+<!--    <div class="upperMenu__divider2">-->
+<!--        <img src="assets/img/svg/divider.svg" alt="divider">-->
+<!--    </div>-->
 
     <div class="upperMenu__repair">
       <a href="#" class=""><img src="assets/img/svg/repair.svg" alt="repair"></a>
@@ -196,9 +196,6 @@
 
 <main class="page">
   <div class="title">
-    <div class="title__highlight">
-      <img src="assets/img/svg/title.svg" alt="title">
-    </div>
 
     <div class="title__text">Услуги и сервисы</div>
 
@@ -263,7 +260,6 @@
 
 
     <div class="mainBlock__expand">
-        <img class="downArrow" src="assets/img/svg/down.svg" alt="down"> <img class="up" src="assets/img/svg/up.svg" alt="up">
         <button type="button" class="buttonBlock__readMore">Читать далее</button>
       </div>
 
@@ -279,7 +275,9 @@
 
 
   <section class="brandCards">
-  <div class="brandCards__header title-size">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</div>
+  <div class="brandCards__header title-size">
+    <div class="title-size__size"> ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ </div>
+  </div>
 
     <div class="swiper">
       <div class="swiper-wrapper brand list-size">
@@ -345,8 +343,8 @@
     <div class="swiper-gradient"></div>
 
     <div class="buttonBlock">
-      <img class="down" src="assets/img/svg/down.svg" alt="down"> <img class="up" src="assets/img/svg/down.svg" alt="up">
-      <button type="button" class="buttonBlock__show-all-button">Показать все</button>
+<!--      <img class="down" src="assets/img/svg/down.svg" alt="down"> <img class="up" src="assets/img/svg/down.svg" alt="up">-->
+      <button type="button" class="buttonBlock__show-all-button buttonBlock__readMore">Показать все</button>
     </div>
   </section>
 
@@ -354,7 +352,9 @@
 
 
   <section class="equipRepair">
-    <div class="equipRepair__header title-size">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</div>
+    <div class="equipRepair__header title-size">
+        <div class="title-size__size"> РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</div>
+    </div>
 
     <div class="swiper equipRepair__container">
       <div class="swiper-wrapper list-size">
@@ -400,8 +400,7 @@
     </div>
 
     <div class="buttonBlock">
-      <img class="down2" src="assets/img/svg/down.svg" alt="down"> <img class="up" src="assets/img/svg/down.svg" alt="up">
-      <button type="button" class="buttonBlock__show-all-button2">Показать все</button>
+      <button type="button" class="buttonBlock__show-all-button2 buttonBlock__readMore">Показать все</button>
     </div>
   </section>
 
@@ -411,8 +410,9 @@
 
 
   <section class="price">
-    <div class="price__header title-size">ЦЕНЫ НА УСЛУГИ</div>
-
+    <div class="price__header title-size">
+      <div class="title-size__size"> ЦЕНЫ НА УСЛУГИ</div>
+    </div>
 
 <div class="hidden--priceCards">
     <div class="swiper">
@@ -490,12 +490,14 @@
 
     <div class="price__container">
       <div class="price__names hidden--mode">
-       <ul class="price__head">
-         <li class="price__item">Ремонтные услуги</li>
-         <li class="price__item">Цена</li>
-         <li class="price__item">Срок</li>
-         <li class="price__item"></li>
-       </ul>
+        <div class="price__heading">
+           <ul class="price__head">
+             <li class="price__item">Ремонтные услуги</li>
+             <li class="price__item">Цена</li>
+             <li class="price__item">Срок</li>
+             <li class="price__item price__item-zero_opacity"><img class="order" src="assets/img/svg/order.svg" alt="order"></li>
+           </ul>
+        </div>
       </div>
       <div class="price__table hidden--mode">
        <ul class="price__head">
@@ -526,7 +528,7 @@
        </ul>
         <img class="separator" src="assets/img/svg/stripe.svg" alt="separator">
         <ul class="price__head">
-         <li class="price__item">Тестирование с выдачей технического заключения</li>
+         <li class="price__item ">Тестирование с выдачей технического заключения</li>
          <li class="price__item">1 000 ₽</li>
          <li class="price__item">30-120 мин</li>
          <li class="price__item">

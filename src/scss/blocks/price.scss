@@ -48,22 +48,35 @@
       display: block;
     }
 
+    //.price__item-margin--auto {
+    //  //justify-self: end;
+    //}
+
   .price {
+
+    &__table {
+      display: grid;
+    }
 
     &__head {
       list-style: none;
-      display: flex;
-      justify-content: space-around;
+      //display: flex;
+      display: grid;
+      grid-template-columns: 5fr 2fr 2fr 1fr;
+      justify-content: space-between;
       align-items: center;
       margin: 0;
       padding: 0;
     }
 
     &__item {
-      width: 25%;
-      padding-left: 15px;
-      padding-top: 15px;
-      padding-right: 15px;
+      //width: 25%;
+      margin: 10px;
+      padding: 0;
+      box-sizing: border-box;
+      //padding-left: 15px;
+      //padding-top: 15px;
+      //padding-right: 15px;
     }
 
 
@@ -75,8 +88,10 @@
     }
 
     &__names {
-      margin-left: 25px;
+      margin-left: 20px;
+      margin-right: 20px;
       margin-bottom: 15px;
+      grid-template-columns: 5fr 2fr 2fr 1fr;
       color: #7E7E82;
     }
   }
@@ -94,4 +109,17 @@
   .separator:last-child {
     opacity: 0;
   }
+
+    .price__item-zero_opacity {
+      opacity: 0;
+    }
+
+    //.price__head .price__item:first-child {
+    //  flex-grow: 1; /* Первый элемент будет расширяться, чтобы занять оставшееся пространство */
+    //  //width: 0; /* Сбросить исходную ширину, чтобы flex-grow работал правильно */
+    //}
+    //
+    //.price__head .price__item:not(:first-child) {
+    //  width: auto; /* Возвращаем исходную ширину для остальных элементов */
+    //}
 }

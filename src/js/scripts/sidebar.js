@@ -9,7 +9,11 @@ let navigation = document.querySelector('.navigation');
 let width = window.innerWidth;
 
 function checkWidth() {
+  width = window.innerWidth;
+
   if (width >= 320 && width < 768) {
+    openSideBar.style.display = 'none';
+    navigation.style.marginLeft = "0";
     burgerButton.addEventListener('click', function() {
       if (openSideBar && closeMain) {
         openSideBar.style.display = 'flex';
@@ -24,7 +28,9 @@ function checkWidth() {
       }
     });
 
-  } else if (width >= 768 && width < 1440) { // TODO
+  } else if (width >= 768 && width < 1440) {
+    openSideBar.style.display = 'none';
+    navigation.style.marginLeft = "0";
     burgerButton.addEventListener('click', function() {
       if (openSideBar && closeMain) {
         burgerButton.style.display = 'none';

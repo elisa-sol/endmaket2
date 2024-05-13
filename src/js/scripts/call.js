@@ -51,6 +51,7 @@ function medium() {
         orderCall.style.animationName = "extension2"
         orderCall.style.display = 'block';
         closeMain.style.opacity = '0.008';
+        closeMain.style.position = 'fixed';
         orderCall.style.position = 'fixed';
         orderCall.style.top = '0';
         orderCall.style.right = '0';

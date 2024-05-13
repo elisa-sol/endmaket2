@@ -12,9 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   readMoreButton.addEventListener("click", function () {
     if (!isExpanded) {
       readMoreButton.textContent = "Скрыть";
-      const arrow = document.querySelector('.downArrow');
-      arrow.classList.toggle('rotate');
-      arrow.style.transform = 'rotate(180deg)';
+      readMoreButton.classList.add('rotateArrow'); //
       readText.style.display = 'block';
       hiddenText.style.display = 'block';
       hiddenText.style.opacity = '1'; //
@@ -23,10 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
       readMoreButton.textContent = "Читать далее";
       readText.style.display = 'block';
       hiddenText.style.display = 'none';
-      hiddenText.style.opacity = '0'; //
-      const arrow = document.querySelector('.downArrow');
-      arrow.classList.remove('rotate');
-      arrow.style.transform = 'rotate(0deg)';
+      hiddenText.style.opacity = '0';
+      readMoreButton.classList.remove('rotateArrow'); //
       isExpanded = false;
     }
   });

@@ -48,7 +48,7 @@ function medium() {
 
     chatButton.addEventListener('click', function() {
       if (openFeedback && closeMain) {
-        openFeedback.style.animationName = "extension2"
+        // openFeedback.style.animationName = "extension2"
         openFeedback.style.display = 'block';
         closeMain.style.opacity = '0.008';
         openFeedback.style.position = 'fixed';

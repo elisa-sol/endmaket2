@@ -13,11 +13,11 @@
     display: flex;
     position: fixed;
     flex-direction: column;
-    width: 100%;
+    width: 320px;
     height: 100%;
     background: white;
     box-shadow: 16px 0 52px 0 #0E185033,
-    -2px 0 4px 0 #454F7E05;
+                -2px 0 4px 0 #454F7E05;
     animation: sideBarOpen 0.5s;
   }
 
@@ -140,6 +140,12 @@
   .sideBar {
       display: none;
     }
+}
+
+@media screen and (min-width: 360px) {
+  .sideBar {
+    width: 360px;
+  }
 }
 
 @media screen and (min-width: 768px) {

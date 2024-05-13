@@ -1,4 +1,4 @@
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .upperMenu {
     display: flex;
     justify-content: space-around;
@@ -7,7 +7,7 @@
     max-width: 100%;
     background: white;
     border-bottom: 1px solid rgb(217, 255, 245);
-    gap: 15px;
+    gap: 10px;
 
     &__divider2 {
       margin-right: auto;
@@ -16,6 +16,21 @@
 
     &__burger {
       padding-left: 25px;
+    }
+
+    &__group::after {
+      content: "";
+      position: absolute;
+      left: 200px;
+      top: 25px;
+      width: 2px;
+      height: 32px;
+      background-color: #EAEAEA;
+      border-radius: 50px;
+    }
+
+    &__repair {
+      margin-left: auto;
     }
 
    &__checkStatus {
@@ -43,17 +58,47 @@
     min-width: 100%;
     background: white;
     margin: 0;
-    column-gap: 25px;
+    column-gap: 15px;
     border-bottom: 1px solid rgb(217, 255, 245);
     box-sizing: border-box;
 
+    &__burger {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    &__burger::after {
+      content: "";
+      position: absolute;
+      left: 85px;
+      top: 25px;
+      width: 2px;
+      height: 32px;
+      background-color: #EAEAEA;
+      border-radius: 50px;
+    }
 
     &__group {
       margin-right: auto;
     }
 
-    &__divider2 {
-      margin: 0;
+    &__checkStatus {
+      padding-right: 25px;
+    }
+
+    &__repair::after {
+      content: "";
+      position: absolute;
+      right: 140px;
+      top: 25px;
+      width: 2px;
+      height: 32px;
+      background-color: #EAEAEA;
+      border-radius: 50px;
+    }
+
+    &__repair {
+      padding-left: 30px;
     }
 
     &__call,

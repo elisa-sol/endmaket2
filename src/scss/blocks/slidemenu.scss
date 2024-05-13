@@ -13,6 +13,7 @@
   padding-left: 13px;
   padding-right: 13px;
   box-sizing: border-box;
+  margin-left: 20px;
 }
 
 .slideMenu__button:hover {
@@ -27,13 +28,23 @@
     background 1s ease-in-out;
 }
 
-@media screen and (min-width: 320px) {
+.slideMenu__button:first-child {
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(184, 255, 236);
+  border-image: initial;
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  transition:
+    border 0.2s ease-in-out,
+    background 1s ease-in-out;
+}
 
+@media screen and (min-width: 320px) {
 
   .slideMenu {
     min-width: 246px;
     max-height: 40px;
-    margin-left: 20px;
     overflow: scroll hidden;
     white-space: nowrap;
   }

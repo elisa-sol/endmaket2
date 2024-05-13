@@ -60,18 +60,14 @@ document.addEventListener("DOMContentLoaded", function () {
         brandItems[i].style.display = s.display;
       }
       showAllButton.textContent = "Скрыть";
-      const arrow = document.querySelector('.down')
-      arrow.classList.toggle('rotate')
-      arrow.style.transform = 'rotate(180deg)'
+      showAllButton.classList.add('rotateArrow');
       isExpanded = true;
     } else {
       for (let i = newCount; i < brandItems.length; i++) {
         brandItems[i].style.display = "none";
       }
       showAllButton.textContent = "Показать все";
-      const arrow = document.querySelector('.down');
-      arrow.classList.remove('rotate');
-      arrow.style.transform = 'rotate(0deg)';
+      showAllButton.classList.remove('rotateArrow');
       isExpanded = false;
     }
   });

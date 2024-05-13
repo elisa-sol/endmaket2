@@ -24,7 +24,6 @@
   .buttonBlock {
     display: flex;
     column-gap: 1px;
-    margin-left: 10px;
   }
 
   .buttonBlock__show-all-button,
@@ -34,5 +33,6 @@
     color: black;
     border: none;
     background: #F8F8F8;
+    margin: 10px;
   }
 }

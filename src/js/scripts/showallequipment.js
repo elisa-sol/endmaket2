@@ -26,18 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
         equipItems[i].style.display = s.display;
       }
       showAllButton.textContent = "Скрыть";
-      const arrow = document.querySelector('.down2')
-      arrow.classList.toggle('rotate')
-      arrow.style.transform = 'rotate(180deg)'
+      showAllButton.classList.add('rotateArrow'); //
       isExpanded = true;
     } else {
       for (let i = newCount; i < equipItems.length; i++) {
         equipItems[i].style.display = "none";
       }
       showAllButton.textContent = "Показать все";
-      const arrow = document.querySelector('.down2');
-      arrow.classList.remove('rotate');
-      arrow.style.transform = 'rotate(0deg)';
+      showAllButton.classList.remove('rotateArrow'); //
       isExpanded = false;
     }
   });
