@@ -1,3 +1,4 @@
+
 let callButton = document.querySelector('.contact__call');
 let callButton2 = document.querySelector('.upperMenu__call');
 let cancelButton = document.querySelector('.orderCall__cross');
@@ -8,7 +9,6 @@ let mainClick = document.querySelector('.page');
 let burgerButton = document.querySelector('.upperMenu__burger');
 let width = window.innerWidth;
 
-
 function small() {
   if (width >= 320 && width < 768) {
     callButton.addEventListener('click', function() {
@@ -16,6 +16,7 @@ function small() {
         orderCall.style.display = 'flex';
         closeMain.style.display = 'none';
         sideBar.style.display = 'none';
+        document.body.classList.add('modal-open');
       }
     });
 
@@ -24,6 +25,7 @@ function small() {
         orderCall.style.display = 'none';
         closeMain.style.display = 'block';
         sideBar.style.display = 'flex';
+        document.body.classList.remove('modal-open');
       }
     });
   }
@@ -32,109 +34,98 @@ function small() {
 function medium() {
   if (width >= 768 && width < 1440) {
     let openedByCallButton = false;
-    let sideBarFlag = false;
+    let sideBarOpened = false;
+
+    let closeOrderCall = function() {
+      orderCall.style.display = 'none';
+      closeMain.style.opacity = '1';
+      openedByCallButton = false;
+      sideBar.removeEventListener("click", sidebarClickHandler);
+      document.body.classList.remove('modal-open');
+    };
+
+    let closeSideBar = function() {
+      sideBar.style.display = 'none';
+      closeMain.style.opacity = '1';
+      sideBarOpened = false;
+      document.body.classList.remove('modal-open');
+    };
 
     let sidebarClickHandler = function(event) {
       event.stopPropagation();
       if (openedByCallButton) {
-        orderCall.style.display = 'none';
-        sideBar.style.opacity = '1';
-        closeMain.style.opacity = '0.08';
-        openedByCallButton = false;
-        sideBar.removeEventListener("click", sidebarClickHandler);
-        sideBarFlag = true;
+        closeOrderCall();
       }
     };
 
-    callButton.addEventListener('click', function() {
-      if (orderCall && closeMain) {
-        orderCall.style.animationName = "extension2"
-        orderCall.style.display = 'block';
-        closeMain.style.opacity = '0.008';
-        closeMain.style.position = 'fixed';
-        orderCall.style.position = 'fixed';
-        orderCall.style.top = '0';
-        orderCall.style.right = '0';
-        orderCall.style.bottom = '0';
-        orderCall.style.zIndex = '1000';
-        sideBar.style.display = 'flex';
-        sideBar.style.opacity = '0.2';
-        burgerButton.style.display = 'flex';
-        orderCall.style.boxShadow = '16px 0px 52px 0px #0E185033';
-        openedByCallButton = true;
-        sideBarFlag = true;
-
-        setTimeout(function() {
-          if (openedByCallButton) {
-            sideBar.addEventListener("click", sidebarClickHandler);
-          }
-        }, 100);
+    function openOrderCall() {
+      if (sideBarOpened) {
+        closeSideBar();
       }
+
+      orderCall.style.animationName = "extension2";
+      orderCall.style.display = 'block';
+      closeMain.style.opacity = '0.08';
+      orderCall.style.position = 'fixed';
+      orderCall.style.top = '0';
+      orderCall.style.right = '0';
+      orderCall.style.bottom = '0';
+      orderCall.style.zIndex = '1000';
+      burgerButton.style.display = 'flex';
+      orderCall.style.boxShadow = '16px 0px 52px 0px #0E185033';
+      openedByCallButton = true;
+
+      setTimeout(function() {
+        if (openedByCallButton) {
+          sideBar.addEventListener("click", sidebarClickHandler);
+        }
+      }, 100);
+
+      document.body.classList.add('modal-open');
+    }
+
+    function openSideBar() {
+      if (openedByCallButton) {
+        closeOrderCall();
+      }
+
+      sideBar.style.display = 'flex';
+      sideBar.style.opacity = '1';
+      closeMain.style.opacity = '0.08';
+      sideBarOpened = true;
+      document.body.classList.add('modal-open');
+    }
+
+    callButton.addEventListener('click', function() {
+      openOrderCall();
     });
 
     callButton2.addEventListener('click', function(event) {
       event.stopPropagation();
-      if (orderCall && mainClick) {
-        orderCall.style.display = 'flex';
-        closeMain.style.opacity = '0.008';
-        orderCall.style.position = 'fixed';
-        orderCall.style.top = '0';
-        orderCall.style.right = '0';
-        orderCall.style.bottom = '0';
-        orderCall.style.zIndex = '1000';
-        closeMain.style.opacity = '0.08';
-        orderCall.style.boxShadow = '16px 0px 52px 0px #0E185033';
+      openOrderCall();
+    });
+
+    burgerButton.addEventListener('click', function(event) {
+      event.stopPropagation();
+      if (sideBarOpened) {
+        closeSideBar();
+      } else {
+        openSideBar();
       }
     });
 
     closeMain.addEventListener("click", function(event) {
       event.stopPropagation();
-      let sideBarFlag1 = sideBar.style.display !== 'none' && sideBar.style.display !== '';
-
-      if (orderCall.style.display !== "none" && sideBarFlag) {
-        if (!sideBarFlag1) {
-          if (sideBar.style.display === 'none' && !sideBarFlag) {
-            orderCall.style.display = 'none';
-            sideBar.style.display = 'flex';
-            sideBar.style.opacity = '1';
-            closeMain.style.opacity = '0.08';
-          } else if (sideBar.style.display === 'none' && !sideBarFlag) {
-            sideBarFlag = true
-          } else {
-            closeMain.style.opacity = '1';
-            orderCall.style.display = 'none';
-          }
-        } else {
-          orderCall.style.display = 'none';
-          sideBar.style.display = 'flex';
-          closeMain.style.opacity = '0.08';
-          sideBar.style.opacity = '1';
-        }
+      if (orderCall.style.display !== "none") {
+        closeOrderCall();
       }
-      else if (orderCall.style.display !== "none" && !sideBarFlag) {
-        if (sideBar.style.display === '' || sideBar.style.display === 'none') {
-          closeMain.style.opacity = '1';
-          orderCall.style.display = 'none';
-        } else {
-          closeMain.style.opacity = '0.08';
-          orderCall.style.display = 'none';
-        }
+      if (sideBarOpened) {
+        closeSideBar();
       }
     });
 
     cancelButton.addEventListener('click', function() {
-      let sideBarFlag1 = sideBar.style.display !== 'none' && sideBar.style.display !== '';
-      let sideBarFlag2 = sideBar.style.display === 'none' || sideBar.style.display === ''
-
-      if (sideBarFlag1) {
-        orderCall.style.display = 'none';
-        closeMain.style.display = 'block';
-        sideBar.style.opacity = '1';
-        closeMain.style.opacity = '0.08';
-      } else if (sideBarFlag2) {
-        orderCall.style.display = 'none';
-        closeMain.style.opacity = '1';
-      }
+      closeOrderCall();
     });
   }
 }
@@ -155,6 +146,7 @@ function large() {
         burgerButton.style.display = 'block';
         orderCall.style.boxShadow = '16px 0px 52px 0px #0E185033';
         openedByCallButton = true;
+        document.body.classList.add('modal-open');
       }
     });
 
@@ -168,6 +160,7 @@ function large() {
         sideBar.style.opacity = '1';
         closeMain.style.opacity = '1';
         openedByCallButton = false;
+        document.body.classList.remove('modal-open');
       }
     });
 
@@ -176,12 +169,12 @@ function large() {
         orderCall.style.display = 'none';
         closeMain.style.opacity = '1';
         sideBar.style.opacity = '1';
+        document.body.classList.remove('modal-open');
       }
     });
   }
 }
 
-small()
-medium()
-large()
-
+small();
+medium();
+large();
