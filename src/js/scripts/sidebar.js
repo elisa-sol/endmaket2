@@ -14,17 +14,24 @@ function checkWidth() {
   if (width >= 320 && width < 768) {
     openSideBar.style.display = 'none';
     navigation.style.marginLeft = "0";
+
     burgerButton.addEventListener('click', function() {
       if (openSideBar && closeMain) {
         openSideBar.style.display = 'flex';
-        closeMain.style.display = 'none';
+        if (width >= 360 && width < 768) {
+          closeMain.style.opacity = '0.08';
+          openSideBar.style.zIndex = '10000';
+          openSideBar.style.opacity = '1';
+        }
       }
     });
 
     crossButton.addEventListener('click', function() {
       if (openSideBar && closeMain) {
+        console.log(3)
         openSideBar.style.display = 'none';
         closeMain.style.display = 'block';
+        closeMain.style.opacity = '1';
       }
     });
 
@@ -33,7 +40,7 @@ function checkWidth() {
     navigation.style.marginLeft = "0";
     burgerButton.addEventListener('click', function() {
       if (openSideBar && closeMain) {
-        burgerButton.style.display = 'none';
+        burgerButton.style.display = 'flex';
         openSideBar.style.display = 'flex';
         openSideBar.style.opacity = '1';
         closeMain.style.opacity = '0.08';
@@ -60,7 +67,7 @@ function checkWidth() {
 }
 
   mainClick.addEventListener('click', function(event) {
-    if (width >= 768 && width < 1440
+    if (width >= 360 && width < 1440
       && openSideBar.style.display === 'flex'
       && !openSideBar.contains(event.target)
       && event.target !== closeMain

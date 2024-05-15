@@ -152,7 +152,7 @@ function large() {
     buttonCross.addEventListener('click', function() {
       if (openFeedback && closeMain) {
         openFeedback.style.display = 'none';
-        burgerButton.style.display = 'flex';
+        // burgerButton.style.display = 'flex';
         closeMain.style.opacity = '1';
         burgerButton.style.display = 'none';
         sideBar.style.display = 'flex';
