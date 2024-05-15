@@ -77,7 +77,7 @@ function medium() {
       orderCall.style.right = '0';
       orderCall.style.bottom = '0';
       orderCall.style.zIndex = '1000';
-      burgerButton.style.display = 'flex';
+      // burgerButton.style.display = 'flex';
       orderCall.style.boxShadow = '16px 0px 52px 0px #0E185033';
       openedByCallButton = true;
 
@@ -564,6 +564,8 @@ function checkWidth() {
     burgerButton.addEventListener('click', function() {
       if (openSideBar && closeMain) {
         openSideBar.style.display = 'flex';
+        openSideBar.style.zIndex = '10000';
+        document.body.classList.add('modal-open');
         if (width >= 360 && width < 768) {
           closeMain.style.opacity = '0.08';
           openSideBar.style.zIndex = '10000';
@@ -578,6 +580,7 @@ function checkWidth() {
         openSideBar.style.display = 'none';
         closeMain.style.display = 'block';
         closeMain.style.opacity = '1';
+        document.body.classList.remove('modal-open');
       }
     });
 
@@ -599,6 +602,7 @@ function checkWidth() {
         group.style.display = 'flex';
         openSideBar.style.display = 'none';
         closeMain.style.opacity = '1';
+        document.body.classList.remove('modal-open');
       }
     });
   } else {
@@ -621,6 +625,7 @@ function checkWidth() {
       openSideBar.style.display = 'none';
       closeMain.style.opacity = '1';
       burgerButton.style.display = 'flex';
+      document.body.classList.remove('modal-open');
     }
   });
 
