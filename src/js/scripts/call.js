@@ -71,7 +71,7 @@ function medium() {
       orderCall.style.right = '0';
       orderCall.style.bottom = '0';
       orderCall.style.zIndex = '1000';
-      burgerButton.style.display = 'flex';
+      // burgerButton.style.display = 'flex';
       orderCall.style.boxShadow = '16px 0px 52px 0px #0E185033';
       openedByCallButton = true;
 
